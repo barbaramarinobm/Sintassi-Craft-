@@ -110,18 +110,186 @@
         .font-accessible-mode { font-family: 'Atkinson Hyperlegible', sans-serif !important; }
         .font-pixel-mode { font-family: 'Press Start 2P', monospace !important; }
 
-        /* Temi e Contrasti */
+        /* =========================================================================
+           TEMI E ALTO CONTRASTO (WCAG AAA)
+           ========================================================================= */
         .theme-high-contrast {
             background-color: #000000 !important;
             background-image: none !important;
             color: #ffffff !important;
         }
+
+        /* Testo generale ad alto contrasto */
+        .theme-high-contrast p,
+        .theme-high-contrast span,
+        .theme-high-contrast h1,
+        .theme-high-contrast h2,
+        .theme-high-contrast h3,
+        .theme-high-contrast h4,
+        .theme-high-contrast div,
+        .theme-high-contrast label,
+        .theme-high-contrast em,
+        .theme-high-contrast strong {
+            color: #ffffff !important;
+        }
+
+        /* Evidenziazioni dorate/gialle */
+        .theme-high-contrast h1,
+        .theme-high-contrast h2,
+        .theme-high-contrast h3,
+        .theme-high-contrast strong,
+        .theme-high-contrast [class*="text-yellow-"],
+        .theme-high-contrast [class*="text-amber-"],
+        .theme-high-contrast [class*="text-stone-300"],
+        .theme-high-contrast [class*="text-stone-400"],
+        .theme-high-contrast [class*="text-stone-500"] {
+            color: #ffff00 !important;
+        }
+
+        /* Box e pannelli */
         .theme-high-contrast .pixel-box, 
         .theme-high-contrast .pixel-box-dark,
         .theme-high-contrast .pixel-box-wood {
-            background-color: #121212 !important;
+            background-color: #0a0a0a !important;
             border-color: #ffff00 !important;
+            box-shadow: 0 0 0 1px #ffff00 !important;
+            color: #ffffff !important;
+        }
+
+        /* Area visualizzazione del periodo: sfondo nero puro, bordo giallo vivido, testo bianco puro */
+        .theme-high-contrast #sentence-display-area {
+            background-color: #000000 !important;
+            border: 3px solid #ffff00 !important;
+            color: #ffffff !important;
             box-shadow: none !important;
+        }
+
+        /* Miniera: contenitore parole e bottoni parola */
+        .theme-high-contrast #word-chips-container {
+            background-color: #141414 !important;
+            border-color: #ffff00 !important;
+        }
+        .theme-high-contrast #word-chips-container button {
+            background-color: #000000 !important;
+            border: 2px solid #ffffff !important;
+            color: #ffffff !important;
+        }
+        .theme-high-contrast #word-chips-container button:hover {
+            background-color: #222222 !important;
+            border-color: #ffff00 !important;
+        }
+        .theme-high-contrast #word-chips-container button span {
+            color: #ffffff !important;
+        }
+        .theme-high-contrast #word-chips-container button.border-mc-redstone {
+            border-color: #ff3333 !important;
+            background-color: #3b0000 !important;
+        }
+        .theme-high-contrast #word-chips-container button.border-mc-redstone span {
+            color: #ffffff !important;
+        }
+
+        /* Crafting: riquadri proposizioni e bottoni opzione */
+        .theme-high-contrast #interaction-zone .pixel-box {
+            background-color: #121212 !important;
+            border: 2px solid #ffff00 !important;
+        }
+        .theme-high-contrast [class*="craft-option-"] {
+            background-color: #000000 !important;
+            border: 2px solid #ffffff !important;
+            color: #ffffff !important;
+        }
+        .theme-high-contrast [class*="craft-option-"] div {
+            color: #ffffff !important;
+        }
+        .theme-high-contrast [class*="craft-option-"]:hover {
+            border-color: #ffff00 !important;
+            background-color: #1f1f1f !important;
+        }
+        .theme-high-contrast [class*="craft-option-"].ring-4 {
+            outline: 3px solid #ffff00 !important;
+        }
+        .theme-high-contrast [class*="craft-option-"].bg-mc-diamond {
+            background-color: #00363a !important;
+            border-color: #00ffff !important;
+        }
+        .theme-high-contrast [class*="craft-option-"].bg-mc-gold {
+            background-color: #4a3800 !important;
+            border-color: #ffff00 !important;
+        }
+        .theme-high-contrast [class*="craft-option-"].bg-mc-emerald {
+            background-color: #004015 !important;
+            border-color: #00ff66 !important;
+        }
+
+        /* Select e campi input / textarea */
+        .theme-high-contrast select,
+        .theme-high-contrast textarea,
+        .theme-high-contrast input {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border: 2px solid #ffff00 !important;
+        }
+        .theme-high-contrast select option {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+
+        /* Villager Hint Box */
+        .theme-high-contrast #villager-hint-box {
+            background-color: #121212 !important;
+            border-left: 8px solid #ffff00 !important;
+            border-color: #ffff00 !important;
+        }
+        .theme-high-contrast #villager-hint-text {
+            color: #ffff00 !important;
+        }
+
+        /* Feedback Box */
+        .theme-high-contrast #feedback-box {
+            background-color: #000000 !important;
+            border: 3px solid #ffff00 !important;
+            color: #ffffff !important;
+        }
+        .theme-high-contrast #feedback-box * {
+            color: #ffffff !important;
+        }
+
+        /* Albero Sintattico */
+        .theme-high-contrast #syntax-tree-container {
+            background-color: #0a0a0a !important;
+            border: 3px solid #ffff00 !important;
+        }
+        .theme-high-contrast #syntax-tree-canvas .pixel-box {
+            background-color: #000000 !important;
+            border: 2px solid #ffff00 !important;
+            color: #ffffff !important;
+        }
+        .theme-high-contrast #syntax-tree-canvas div,
+        .theme-high-contrast #syntax-tree-canvas span {
+            color: #ffffff !important;
+        }
+
+        /* Pulsanti d'azione */
+        .theme-high-contrast .pixel-btn {
+            border: 2px solid #ffff00 !important;
+            box-shadow: none !important;
+        }
+        .theme-high-contrast .pixel-btn:hover {
+            outline: 2px solid #ffffff !important;
+        }
+
+        /* Modali */
+        .theme-high-contrast #accessibility-modal .pixel-box,
+        .theme-high-contrast #guide-modal .pixel-box,
+        .theme-high-contrast #inventory-modal .pixel-box-dark {
+            background-color: #000000 !important;
+            border: 4px solid #ffff00 !important;
+            color: #ffffff !important;
+        }
+        .theme-high-contrast #guide-modal div {
+            background-color: #111111 !important;
+            border: 2px solid #ffff00 !important;
             color: #ffffff !important;
         }
 
@@ -1930,8 +2098,8 @@
             saveState();
         }
 
-        function setTheme(theme) {
-            playSound('click');
+        function setTheme(theme, skipSound = false) {
+            if (!skipSound) playSound('click');
             appState.highContrast = (theme === 'high-contrast');
             if (appState.highContrast) {
                 document.body.classList.add('theme-high-contrast');
@@ -1965,7 +2133,7 @@
             loadSavedState();
             changeFontFamily(appState.fontFamily);
             setSpacing(appState.spacing);
-            if (appState.highContrast) setTheme('high-contrast');
+            if (appState.highContrast) setTheme('high-contrast', true);
             updateXPUI();
         };
     </script>
